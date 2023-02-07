@@ -1,38 +1,87 @@
-.App {
-  text-align: center;
+body {
+  padding: 2rem 1.5rem;
+  margin: 0 auto;
+  color: #241623;
+  background: linear-gradient(#000428,#004E92);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.searchBarDiv {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-bottom: 18px;
+}
+
+.searchBar {
+  width: 50%;
+  height: 20px;
+  border: 2px solid lightblue;
+  border-radius: 8px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container:hover>:not(:hover){
+  opacity: .4;
+  transform: scale(0.9);
+}
+
+/* image div*/
+.imgDiv {
+  margin: 8px;
+  height: 250px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .35s;
+}
+
+.imgBlock {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  float: left;
+}
+
+.buttom-left {
+  max-width: 220px;
   color: white;
+  position: absolute;
+  margin-top: 215px;
+  margin-left: 0.4rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* media query */
+@media screen and (max-width: 480px) {
+  .imgDiv {
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .searchBar{
+    width: 90%;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .imgDiv {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px){
+  .imgDiv {
+    width: 40%;
+  }
+}
+@media (min-width: 1025px) and (max-width: 1280px){
+  .imgDiv {
+    width: 250px;
+  }
+}
+@media (min-width: 1281px) {
+  .imgDiv {
+    width: 250px;
   }
 }
